@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layouts/main">
+<head>
+    <title>Shoppy Tiny</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<nav layout:include="layouts/menu_navbar"></nav>
+		
+		<div class="container">
+		
+			<h1>Create product</h1>
+			<hr />
+			
+			<div th:if="${ isSaved }">
+			
+				<div th:text="${ isSaved }"></div>
+				
+			</div>
+			
+			<form action="#" th:action="@{/shop/products/create}" th:object="${product}" method="POST">
+			
+				<div class="control-group">
+					<h3>Name:</h3>
+					<input th:field="*{name}" placeholder="Name" type="text" class="form-control" required="required" />
+				</div>
+				
+				<div class="control-group">
+					<h3>Image:</h3>
+					<input th:field="*{image}" class="form-control" type="file" required="required" />
+				</div>
+				
+				<div class="control-group">
+					<h3>Description:</h3>
+					<textarea th:field="*{description}" placeholder="Description" type="text" class="form-control" required="required"></textarea>
+				</div>
+				
+				<div class="control-group">
+					<h3>Price:</h3>
+					<input th:field="*{price}" placeholder="Price" type="text" class="form-control" required="required" />
+				</div>
+				
+				<hr />
+				<button type="submit" class="btn btn-primary">Create product</button>
+			</form>
+			
+		</div>
+
+	</div>
+</body>
+</html>

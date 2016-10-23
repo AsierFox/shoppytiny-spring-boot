@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layouts/main">
+<head>
+    <title>Categorias</title>
+</head>
+<body>
+
+	<div layout:fragment="content">
+		<nav layout:include="layouts/menu_navbar"></nav>
+		
+		<div class="container">
+		
+			<h1>All categories</h1>
+			<hr />
+			
+			<div class="col-md-5">
+			
+				<ul class="list-group">
+					<li th:each="cat: ${ allCategories }" class="list-group-item">
+						<span th:text="${ cat.products.size() }" class="badge"></span>
+						<a th:href="@{/shop/categories/} + ${ cat.name }"><span th:text="${ cat.name }"></span></a>
+					</li>
+				</ul>
+			
+			</div>
+			
+		</div>
+	    
+	</div>
+</body>
+</html>

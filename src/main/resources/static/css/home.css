@@ -1,0 +1,14 @@
+html, body {
+	background-image: url(../img/home-bg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: black;
+	text-align: center;
+	margin-top: 2%;
+	color: #337ab7;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 4em;
+}

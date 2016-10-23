@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layouts/main">
+<head>
+    <title>Shoppy Tiny</title>
+    <style>
+    	.container { text-align: center; }
+    </style>
+</head>
+<body>
+	<div layout:fragment="content">
+		<nav layout:include="layouts/menu_navbar"></nav>
+		
+			<div class="container">
+			<div class="row">
+				<h1 class="center">Shoppy Tiny</h1>
+				<hr />
+			</div>
+			<div class="row">
+	        <div class="col-lg-4">
+	          <img class="img-circle" src="/img/low-prices.jpg" alt="low prices" width="140" height="140" />
+	          <h2>Low prices</h2>
+	          <p>You are going to enjoy the low prices of the products on this shop.</p>
+	        </div>
+	        <div class="col-lg-4">
+	          <img class="img-circle" src="/img/fast-shipping.gif" alt="Generic placeholder image" width="140" height="140" />
+	          <h2>Fast shipping</h2>
+	          <p>Your orders as soon as posible to arrive your house door.</p>
+	        </div>
+	        <div class="col-lg-4">
+	          <img class="img-circle" src="/img/biodegradable-products.jpg" alt="Generic placeholder image" width="140" height="140" />
+	          <h2>Biodegradable products</h2>
+	          <p>All the product containers are nature friendly thanks to the biodegradable materials.</p>
+	        </div>
+	      </div>
+	     </div>
+
+	</div>
+</body>
+</html>
